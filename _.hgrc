@@ -1,0 +1,11 @@
+[ui]
+username = Jamie Macey <jamie@tracefunc.com>
+ignore = ~/.hgignore
+
+[extensions]
+fetch = 
+transplant = 
+shelve =
+record =
+hgext.hgk = 
+

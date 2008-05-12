@@ -1,0 +1,28 @@
+task :railscov do
+  opts = [
+    '-o rcov',
+    '--rails',
+    '--sort loc',
+    '--sort-reverse',
+    '--only-uncovered',
+    '-x /Library',
+    '--text-summary',
+  ]
+  test_files = ['test/test_helper.rb'] +
+         	     FileList['test/unit/**/*_test.rb'] +
+	             FileList['test/functional/**/*_test.rb']
+  puts `rcov #{opts.join(' ')} #{test_files.join(' ')}`
+end
+
+task :railscov_full do
+  opts = [
+    '-o rcov',
+    '--rails',
+    '-x /Library',
+    '--text-summary',
+  ]
+  test_files = ['test/test_helper.rb'] +
+         	     FileList['test/unit/**/*_test.rb'] +
+	             FileList['test/functional/**/*_test.rb']
+  puts `rcov #{opts.join(' ')} #{test_files.join(' ')}`
+end
