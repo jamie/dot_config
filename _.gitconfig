@@ -1,3 +1,9 @@
 [user]
 	name = Jamie Macey
 	email = jamie.git@tracefunc.com
+
+[apply]
+	whitespace = strip
+
+[core]
+	excludesfile = /Users/jamie/.gitexcludes
